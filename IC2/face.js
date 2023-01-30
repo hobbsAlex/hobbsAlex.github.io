@@ -8,7 +8,7 @@ This file does the actual drawing of the triangle
 // Global variables we'll need
 var gl;
 var points;
-
+var vertices;
 // This function executes our WebGL code AFTER the window is loaded.
 // Meaning, that we wait for our canvas element to exist.
 window.onload = function init() {
@@ -19,16 +19,13 @@ window.onload = function init() {
   // Error checking
   if (!gl) { alert('WebGL unavailable'); }
 
-  // triangle vertices
-  var vertices = [
-    vec2(-1, -1),
-    vec2(0, 1),
-    vec2(1, -1)
-	
-  ];
-	
-	
- 
+  // circle vertices
+  vertices = [];
+	vertices[0]=vec2(0,0);
+	for (var step=1; step < 902; step+=1) {
+		angle = step*Math.PI / 450;
+		vertices[step] = vec2(Math.sin(angle), Math.cos(angle));
+	}
   // configure WebGL
   gl.viewport(0, 0, canvas.width, canvas.height);
   red = Math.random();
@@ -55,5 +52,5 @@ window.onload = function init() {
 // Render whatever is in our gl variable
 function render() {
   gl.clear(gl.COLOR_BUFFER_BIT);
-  gl.drawArrays(gl.TRIANGLES, 0, 3);
+  gl.drawArrays(gl.TRIANGLE_FAN, 0, vertices.length);
 }
