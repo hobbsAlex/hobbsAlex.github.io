@@ -7,3 +7,6 @@ Triangle:
 
 Sierpinski Gasket: 
 [HW1](https://hobbsalex.github.io/HW1/gasket1-hobbs.html)
+
+Interact with Triangle:
+[HW2](https://hobbsalex.github.io/HW2/triangle-interact.html)
