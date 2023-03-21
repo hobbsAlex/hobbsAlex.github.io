@@ -71,10 +71,10 @@ let boxHeight = 2;
 let boxDepth = 0.2;
 */
 
-const torusGeometry = new THREE.TorusGeometry( 3, 1, 10, 60 );
+const torusGeometry = new THREE.TorusGeometry( 2, 0.5, 10, 60 );
 const torusMaterial = new THREE.MeshBasicMaterial( { color: 0x22bbff } );
 const torus = new THREE.Mesh( torusGeometry, torusMaterial );
-torus.position.set(0,7,-5)
+torus.position.set(0,2,-3.5)
 torus.receiveShadow = true;
 torus.castShadow = true;
 scene.add( torus );
@@ -130,7 +130,7 @@ for(let i = 0; i < boxes.length; i++) {
  requestAnimationFrame( animate );
  renderer.render( scene, camera );
  torus.rotateX(Math.PI/(200));
- torus.rotateY(Math.PI/(101));
+ torus.rotateY(Math.PI/(103));
 }
 animate();
 
