@@ -71,10 +71,10 @@ let boxHeight = 2;
 let boxDepth = 0.2;
 */
 
-const torusGeometry = new THREE.TorusGeometry( 4, 1, 12, 60 );
+const torusGeometry = new THREE.TorusGeometry( 3, 1, 10, 60 );
 const torusMaterial = new THREE.MeshBasicMaterial( { color: 0x22bbff } );
 const torus = new THREE.Mesh( torusGeometry, torusMaterial );
-torus.position.set(0,8,-7)
+torus.position.set(0,7,-5)
 torus.receiveShadow = true;
 torus.castShadow = true;
 scene.add( torus );
