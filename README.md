@@ -24,5 +24,9 @@
 
 [Gasket Extended with random colors](https://hobbsalex.github.io/HW2/gasket-extended.html)
 
+### HW3: 3 js
+
+[demo](https://hobbsalex.github.io/HW3/index.html)
+
 
 
